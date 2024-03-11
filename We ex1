@@ -1,0 +1,110 @@
+PROGRAM:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<title>Interactive Website</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js"></script>
+
+<header>
+
+<h1>Interactive Website</h1>
+
+</header>
+
+<main>
+
+<form id="myForm" onsubmit="submitForm(event)">
+
+<label for="name">Name:</label>
+
+<input type="text" id="name" name="name" required><br><br>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required><br><br>
+<label for="subject">Subject:</label>
+<select id="subject" name="subject">
+<option value="general">General Inquiry</option>
+<option value="feedback">Feedback</option>
+<option value="support">Technical Support</option>
+</select><br><br>
+<label for="message">Message:</label>
+<textarea id="message" name="message" rows="4" cols="50"
+required></textarea><br><br>
+<input type="submit" value="Submit">
+</form>
+</main>
+<footer>
+<p>&copy; 2023 Interactive Website. All rights reserved.</p>
+</footer>
+</body>
+</html>
+body {
+font-family: Arial, sans-serif;
+}
+header {
+background-color: #333;
+color: #fff;
+padding: 10px;
+text-align: center;
+}
+main {
+}
+form {
+}
+padding: 10px;
+background-color: #f2f2f2;
+border-radius: 5px;
+padding: 20px;
+}
+label {
+}
+display: block;
+font-weight: bold;
+margin-bottom: 10px;
+input[type="text"],
+input[type="email"],
+textarea {
+border-radius: 3px;
+border: none;
+box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+padding: 10px;
+width: 100%;
+}
+select {
+}
+border-radius: 3px;
+padding: 10px;
+input[type="submit"] {
+background-color: #333;
+border: none;
+border-radius: 3px;
+color: #fff;
+cursor: pointer;
+margin-top: 10px;
+padding: 10px;
+width: 100%;
+}
+input[type="submit"]:hover {
+background-color: #555;
+}
+function submitForm(event) {
+event.preventDefault();
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var subject = document.getElementById("subject").value;
+var message = document.getElementById("message").value;
+alert("Thank you for submitting your inquiry, " + name + "!\n\nSubject: " + subject + "\n\nMessage: "
++ message);
+document.getElementById("myForm").reset();
+}
