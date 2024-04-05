@@ -1,0 +1,180 @@
+1.	Create a bank database table, add constraints (primary key, check), insert rows, update and delete rows using DDL and DML commands
+2.	Create a set of tables for cargo service database, add foreign key constraints and incorporate referential integrity.
+3.	Create a Product, Sales and purchase table using DDL and DML commands
+4.	Using DDL and DML commands, create the employee_personal, Salary, and Department tables. In addition, determine the minimum, maximum, total, and average salaries in the database mentioned above.
+5.	Create an online purchase database using DDL and DML commands. Use sub queries to present the information about the items you've purchased
+6.	Create Omni bus reservation database using DDL and DML commands and also display the results after applying join operation.
+7.	Consider the following schema for a Library Database: BOOK (Book_id, Title, Publisher_Name, Pub_Year, No_of_copies) BOOK_AUTHORS (Book_id, Author_Name) PUBLISHER (Name, Address, Phone)
+ a) Retrieve details of all books in the Book_id, title, name of publisher, authors 
+b) Get the particulars of borrowers who have borrowed more than 3 books, but from Jan 2017 to Jun2017.
+ c) Delete a book in BOOK table. Update the contents of other tables to reflect this data Manipulation operations.
+8.  Create a table employee (S.No,Name,Desination,brach),
+ a) Alter the table by adding a column salary
+ b) Copy the table employee as Emp 
+c) Delete 2nd row from the table 
+d) Drop the table
+9.Create a table called Employee (Emp_no Emp_name, Emp_dept,Job ,Mgr ,Sal) 
+a) By using the group by clause, display the Emp_name who belongs to Emp_dept=”xxx” along with salary
+ b) Display lowest paid employee details under each department
+ c) List the employee names in descending order.
+ d) Rename the column of Employee table using alter command
+10.Create table as Bank ( S.No,Cust_Name, Acc_No, Balance, Branch), 
+a) Select with where clause.
+ b) Select with comparison operator. 
+c) Update the balance in the second row.
+ d) Select with between in the field balance.
+ e) Write a trigger when balance is below 1000.
+11.Write an SQL query to report the first name, last name, city, and state of each person in the Person table. If the address of a personId is not present in the Address table, report null instead.
+
+Return the result table in any order.
+
+The query result format is in the following example 
+Input: 
+Person table:
++----------+----------+-----------+
+| personId | lastName | firstName |
++----------+----------+-----------+
+| 1        | Wang     | Allen     |
+| 2        | Alice    | Bob       |
++----------+----------+-----------+
+Address table:
++-----------+----------+---------------+------------+
+| addressId | personId | city          | state      |
++-----------+----------+---------------+------------+
+| 1         | 2        | New York City | New York   |
+| 2         | 3        | Leetcode      | California |
++-----------+----------+---------------+------------+
+
+Output: 
++-----------+----------+---------------+----------+
+| firstName | lastName | city          | state    |
++-----------+----------+---------------+----------+
+| Allen     | Wang     | Null          | Null     |
+| Bob       | Alice    | New York City | New York |
++-----------+----------+---------------+----------+
+Explanation: 
+There is no address in the address table for the personId = 1 so we return null in their city and state.
+addressId = 1 contains information about the address of personId = 2.
+
+12.Employee
++-------------+------+
+| Column Name | Type |
++-------------+------+
+| id          | int  |
+| salary      | int  |
++-------------+------+
+id is the primary key column for this table.
+Each row of this table contains information about the salary of an employee.
+Write an SQL query to report the second highest salary from the Employee table. If there is no second highest salary, the query should report null.
+The query result format is in the following example.
+a. Input: 
+Employee table:          
++----+--------+
+| id | salary |
++----+--------+
+| 1  | 100    |
+| 2  | 200    |
+| 3  | 300    |
++----+--------+
+Output:
++----+--------+
+| id | salary |
++----+--------+
+| 1  | 100    |
+| 2  | 200    |
+| 3  | 300    |
+b. Input: 
+Employee table:
++----+--------+
+| id | salary |
++----+--------+
+| 1  | 100    |
++----+--------+
+Output: 
++---------------------+
+| SecondHighestSalary |
++---------------------+
+| null                |
++---------------------+
+13.Write an SQL query to rank the scores. The ranking should be calculated according to the following rules:
+The scores should be ranked from the highest to the lowest.
+If there is a tie between two scores, both should have the same ranking.
+After a tie, the next ranking number should be the next consecutive integer value. In other words, there should be no holes between ranks.
+Return the result table ordered by score in descending order.
+The query result format is in the following example.
+Input: 
+Scores table:
++----+-------+
+| id | score |
++----+-------+
+| 1  | 3.50  |
+| 2  | 3.65  |
+| 3  | 4.00  |
+| 4  | 3.85  |
+| 5  | 4.00  |
+| 6  | 3.65  |
++----+-------+
+Output: 
++-------+------+
+| score | rank |
++-------+------+
+| 4.00  | 1    |
+| 4.00  | 1    |
+| 3.85  | 2    |
+| 3.65  | 3    |
+| 3.65  | 3    |
+| 3.50  | 4    |
++-------+------+
+14.Consider following databases reserves(sid, bid, day) sailors (sid, sname, rating, age) boats (bid,bname,color)using relational algebra
+(i) Find the names of sailors who have reserved boat number 103
+
+(ii) Find the names of sailors who have reserved a red boat
+
+(iii) Find the id of sailors with age over 20 who have not reserved red boat
+
+(iv) Find the names of sailors who have reserved at least one boat
+
+15.Consider following relational database
+
+branch(branch_name, branch_city, assets)
+
+customer (customer_name, customer_street, customer_city)
+
+loan (loan_number, branch_name,amount)
+
+borrower(customer_name, loan_number)
+
+account (account_number, branch_name, balance)
+
+depositor (customer_name, account_number)
+
+i) Find the names of all branches located in "Chennai".
+
+ii) Find the names of all borrowers who have a loan in branch "ABC".
+
+16. author (author_id, first_name, last_name)
+
+author_pub(author_id, pub_id, author_position)
+
+book(book_id, book_title, month, year, editor)
+
+pub(pub_id, title, book_id)
+
+(i) Give the relational algebra expression that returns names of all the authors that are book editors
+(ii) Give the relational algebra expression that returns names of all the authors that are not book editors
+(iii) Write a relational algebra expression that returns the names of all authors who have at least one publication in the database.
+
+17.Consider the relational database
+
+employee (person-name, street, city)
+
+works (person-name, company-name, salary)
+
+company (company-name, city)
+
+manages (person-name, manager-name)
+
+where primary keys are underlined.
+(a) Find the names of all employees who work for First Bank Corporation
+(b) Find the names, street address, and cities of residence of all employees who work for First Bank Corporation and earn more than 200,000 per annum.
+(c) Find the names of all employees in this database who live in the same city as the company for which they work.AU: Dec.-06, Marks 
