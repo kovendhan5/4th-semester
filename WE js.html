@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literals in JavaScript</title>
+</head>
+<body style="background-color:black;">
+    <section style="text-align:justify;color: whitesmoke; font-family:cavolini;background-image:url(https://img.freepik.com/free-photo/painted-solid-concrete-wall-textured-backdrop_53876-128506.jpg?w=996&t=st=1714561324~exp=1714561924~hmac=0b85e3c6a41084bc2843c5501eae34c7f1bd1495d580d23bc5d28eb022eca142);background-attachment:scroll;">
+    <p style="border-radius: 100px;text-align: center;font-size: 60px;">Literals</p>
+    <h2>1. Numerical Literals:</h2>
+    <div style="display: flex;-ms-flex-align: center; font-size: larger;">
+        <pre>        </pre>
+    <p>A numerical literal is a literal value that represents a number.<br>
+Numeric literals in JavaScript represent numeric values. These can be integers or floating-point numbers.<br> Here are examples of numeric literals:<br>
+<br><code>
+    let integer = 42;      // Integer literal<br>
+let float = 3.14;      // Floating-point literal<br>
+let negative = -10;    // Negative integer literal<br>
+let exponential = 2e3; // Exponential notation: 2 * 10^3<br>
+</code><br>
+Numeric literals can be expressed in decimal (base 10), hexadecimal (base 16), octal (base 8), or binary (base 2) formats:
+<br><br>
+<code>let decimal = 42;       // Decimal literal (base 10)<br>
+    let hexadecimal = 0x2A; // Hexadecimal literal (base 16)<br>
+    let octal = 0o52;       // Octal literal (base 8)<br>
+    let binary = 0b101010;  // Binary literal (base 2)<br>
+    <br></code>
+</p>
+</div>
+</section>
+<section style="text-align:justify;color: whitesmoke; font-family:cavolini;background-image:url(https://img.freepik.com/free-photo/painted-solid-concrete-wall-textured-backdrop_53876-128506.jpg?w=996&t=st=1714561324~exp=1714561924~hmac=0b85e3c6a41084bc2843c5501eae34c7f1bd1495d580d23bc5d28eb022eca142);background-attachment:scroll;">
+    <br>
+    <h2>2. String Literals</h2>
+    <div style="display: flex;-ms-flex-align: center; font-size: larger;">
+        <pre>        </pre>
+    <p>String literals in JavaScript represent sequences of characters enclosed in single (' ') or double (" ") quotes.<br> Here are examples of string literals:<br><br>
+        <code>let singleQuotes = 'Hello, world!';   // Single quotes<br>
+            let doubleQuotes = "JavaScript";      // Double quotes<br>
+            let stringWithEscape = 'I\'m happy';   // Using escape character (\)<br>
+            let multiLine = `This is <br>
+            a multi-line <br>
+            string`;                               // Template literals (backticks)<br>
+            </code><br><br>
+            JavaScript allows you to use escape characters within string literals to represent characters that are difficult or impossible to type directly into the string. Common escape characters include:<br><br>
+<code>
+\n: Newline<br>
+\t: Tab<br>
+\': Single quote<br>
+\": Double quote<br>
+\\: Backslash<br><br>
+</code>
+Template literals, introduced in ECMAScript 6 (ES6), provide a more convenient way to create strings. They are enclosed in backticks (```) and allow for interpolation of variables and expressions using ${}:<br><br>
+<code>
+let name = "Alice";<br>
+let greeting = `Hello, ${name}!`; // Interpolation with template literals<br>
+</code><br>
+Template literals also support multi-line strings without the need for explicit newline characters. This makes them especially useful for creating more readable code when dealing with lengthy strings or HTML templates.<br>
+    </p>
+    </div>
+</section>
+<section style="text-align:justify;color: whitesmoke; font-family:cavolini;background-image:url(https://img.freepik.com/free-photo/painted-solid-concrete-wall-textured-backdrop_53876-128506.jpg?w=996&t=st=1714561324~exp=1714561924~hmac=0b85e3c6a41084bc2843c5501eae34c7f1bd1495d580d23bc5d28eb022eca142);background-attachment:scroll;">
+    <h2>3. Object literals</h2>
+    <div style="display: flex;-ms-flex-align: center; font-size: larger;">
+        <pre>        </pre>
+        <p>Object literals in JavaScript are used to define objects by specifying key-value pairs within curly braces {}. <br>Each key-value pair represents a property of the object. Here's an example of an object literal:<br><br>
+        <code>let person = {<br>
+            name: "John",      // Property: name, Value: "John"<br>
+            age: 30,           // Property: age, Value: 30<br>
+            isAdmin: false     // Property: isAdmin, Value: false<br>
+        };<br>
+        </code><br><br>
+        In this example, person is an object with three properties: name, age, and isAdmin. The keys (name, age, isAdmin) are called property names, and the corresponding values ("John", 30, false) are called property values.<br><br>
+        Object literals can contain various types of values, including strings, numbers, booleans, arrays, other objects, and even functions:<br><br>
+        <code>
+            let book = {<br>
+                title: "The Great Gatsby",<br>
+                author: {<br>
+                    name: "F. Scott Fitzgerald",
+                    dob: 1896,<br>
+                    nationality: "American"<br>
+                },<br>
+                pages: 218,<br>
+                isBestseller: true,<br>
+                genres: ["Fiction", "Classics"],<br>
+                printInfo: function() {<br>
+                    console.log(`${this.title} by ${this.author.name}`);<br>
+                }<br>
+            };<br>
+        </code><br>
+        You can access the properties of an object using dot notation (objectName.propertyName) or bracket notation (objectName["propertyName"]):<br><br>
+        <code>console.log(person.name);  // Output: "John"<br>
+            console.log(book["title"]); // Output: "The Great Gatsby"
+            </code>
+    </p>
+    </div>
+</section>
+<section style="text-align:justify;color: whitesmoke; font-family:cavolini;background-image:url(https://img.freepik.com/free-photo/painted-solid-concrete-wall-textured-backdrop_53876-128506.jpg?w=996&t=st=1714561324~exp=1714561924~hmac=0b85e3c6a41084bc2843c5501eae34c7f1bd1495d580d23bc5d28eb022eca142);background-attachment:scroll;">
+    <h2>4. Array literals</h2>
+    <div style="display: flex;-ms-flex-align: center; font-size: larger;">
+        <pre>        </pre>
+        <p>Array literals in JavaScript are used to create arrays, which are ordered collections of values. Arrays are defined by enclosing their elements within square brackets [], separated by commas. Here's an example of an array literal:<br><br>
+        <code>
+            let mixedArray = [42, "Hello", true, {name: "John"}, [1, 2, 3]];<br>
+        </code>
+        <br>
+        You can access elements of an array using square bracket notation with the index of the element you want to access:<br><br>
+        <code>
+            console.log(mixedArray[0]); <br>
+console.log(mixedArray[1]);  <br>
+console.log(mixedArray[2]);  <br>
+
+        </code>
+    </p>
+    </div>
+</section>
+<section style="text-align:justify;color: whitesmoke; font-family:cavolini;background-image:url(https://img.freepik.com/free-photo/painted-solid-concrete-wall-textured-backdrop_53876-128506.jpg?w=996&t=st=1714561324~exp=1714561924~hmac=0b85e3c6a41084bc2843c5501eae34c7f1bd1495d580d23bc5d28eb022eca142);background-attachment:scroll;">
+    <h2>5. RegExp literals</h2>
+    <div style="display: flex;-ms-flex-align: center; font-size: larger;">
+        <pre>        </pre>
+        <p>Regular expression literals in JavaScript are used to define patterns that can be used to perform pattern matching and search operations on strings. Regular expressions are enclosed within forward slashes / / and may contain optional flags that control how the pattern matching is performed. Here's an example of a regular expression literal:<br><br>
+            <code>
+                let pattern = /[a-z]+/;<br>
+            </code><br><br>
+            In this example, pattern is a regular expression that matches one or more lowercase letters (a through z). Regular expressions can include a variety of special characters and quantifiers to define more complex patterns.
+        </p>
+    </div>
+</section>
+<section style="color:white;background-color: black;">
+    <!-- Output placeholders -->
+    <h1 style="text-align: center;">JavaScript starts from here</h1>
+    <div id="output" ></div>
+</section>
+
+    <script>
+        // Numeric literals
+        let age = 25;
+        let price = 9.99;
+
+        // String literals
+        let greeting = "Hello, world!";
+        let programmingLanguage = 'JavaScript';
+
+        // Boolean literals
+        let isRaining = false;
+        let isSunny = true;
+
+        // Object literals
+        let person = {
+            name: "John",
+            age: 30,
+            isAdmin: false
+        };
+
+        // Array literals
+        let fruits = ["apple", "banana", "orange"];
+
+        // RegExp literals
+        let pattern = /[a-z]+/;
+
+        // Function to display output
+        function displayOutput(output) {
+            document.getElementById("output").innerHTML += "<p>" + output + "</p>";
+        }
+
+        // Outputting the literals
+        displayOutput("&nbsp;        Numeric literals:");
+        displayOutput("&nbsp;         Age: " + age);
+        displayOutput(" &nbsp;        Price: " + price);
+
+        displayOutput("<br>&nbsp;        String literals:");
+        displayOutput("&nbsp;         Greeting: " + greeting);
+        displayOutput("&nbsp;         Programming language: " + programmingLanguage);
+
+        displayOutput("<br>&nbsp;        Boolean literals:");
+        displayOutput("&nbsp;         Is it raining? " + isRaining);
+        displayOutput("&nbsp;         Is it sunny? " + isSunny);
+
+        displayOutput("<br>&nbsp;        Object literals:");
+        displayOutput("&nbsp;          Person: " + JSON.stringify(person));
+
+        displayOutput("<br>&nbsp;        Array literals:");
+        displayOutput("&nbsp;          Fruits: " + fruits.join(", "));
+
+        displayOutput("<br>&nbsp;        RegExp literals:");
+        displayOutput("&nbsp;           Pattern: " + pattern);
+    </script>
+</body>
+</html>
