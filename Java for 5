@@ -1,0 +1,51 @@
+Certainly! To create a Java Servlet that will handle the form data submitted from the HTML form and display the student information, you can use the following code snippet:
+
+```java
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/StudentInfoServlet")
+public class StudentInfoServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Retrieve form data using request.getParameter()
+        String rollNumber = request.getParameter("rollNumber");
+        String studentName = request.getParameter("studentName");
+        String address = request.getParameter("address");
+        String phone = request.getParameter("phone");
+        int totalMarks = Integer.parseInt(request.getParameter("marks"));
+
+        // Set the content type to HTML
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        // Generate the HTML output
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Student Information Output</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>Student Information</h1>");
+        out.println("<p>Roll Number: " + rollNumber + "</p>");
+        out.println("<p>Student Name: " + studentName.toUpperCase() + "</p>");
+        out.println("<p>Student Address: " + address + "</p>");
+        out.println("<p>Phone: " + phone + "</p>");
+        out.println("<p>Total Marks: " + totalMarks + "</p>");
+        out.println("</body>");
+        out.println("</html>");
+    }
+}
+```
+
+This servlet will handle the POST request from the HTML form you created earlier. It retrieves the form data, processes it, and then generates an HTML page displaying the student's information. Make sure to deploy this servlet on a Java servlet container like Apache Tomcat and map the form's `action` attribute to the URL pattern of this servlet (`/StudentInfoServlet`).
+
+Remember to replace the placeholder values with actual logic to fetch data from your database or any other data source you're using. If you need further assistance with database connectivity or any other advanced features, feel free to ask!
+
+Source: Conversation with Bing, 5/4/2024
+(1) github.com. https://github.com/hyuntaekhong/hyuntaekhong.github.io/tree/5bb9c04e3e0c2bac6e7f0eff095e3fc7199b4cc6/_posts%2F2020-07-28-TIL-200728.md.
+(2) github.com. https://github.com/nyLee-max/web_basic/tree/fb9bbab837ecb29d94bf04749d090aaeabe9b505/src%2Fweb_basic_jsp_03%2FChoiceDogServlet.java.
