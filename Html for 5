@@ -1,0 +1,42 @@
+Sure, to create an HTML form that works with the Java Servlet code provided earlier, you can use the following HTML code. This form will send a POST request to the server when the submit button is clicked, which will be handled by the `StudentInfoServlet`:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+</head>
+<body>
+
+<h1>Student Information Form</h1>
+
+<form action="StudentInfoServlet" method="post">
+    <label for="rollNumber">Roll Number:</label><br>
+    <input type="text" id="rollNumber" name="rollNumber"><br><br>
+
+    <label for="studentName">Student Name:</label><br>
+    <input type="text" id="studentName" name="studentName"><br><br>
+
+    <label for="address">Student Address:</label><br>
+    <input type="text" id="address" name="address"><br><br>
+
+    <label for="phone">Phone:</label><br>
+    <input type="text" id="phone" name="phone"><br><br>
+
+    <label for="marks">Total Marks:</label><br>
+    <input type="number" id="marks" name="marks"><br><br>
+
+    <button type="submit">Submit</button>
+</form> 
+
+</body>
+</html>
+```
+
+Make sure that your web server is running and that the `StudentInfoServlet` is correctly mapped in your web application's deployment descriptor (`web.xml`) or through annotations, so that the form knows where to send the data upon submission. If you have any more questions or need further assistance, feel free to ask!
+
+Source: Conversation with Bing, 5/4/2024
+(1) github.com. https://github.com/teemax1/libdata/tree/e155f5a0c22c24ace34d6c627881b7bf30432acc/student-list.php.
+(2) github.com. https://github.com/EndaHallahan/School-Git/tree/fa669ce8bfe53b2cfcee148860d35214ff960ec8/wdv490%2Fportfolio_day_form%2Fstudent-info-form.php.
